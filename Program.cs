@@ -51,6 +51,7 @@ else
 
 // Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
 
+/*
 Console.Write("Input a number: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
@@ -64,4 +65,64 @@ while (current <= num)
     }
     current++;
 }
+
+*/
+
+
+// Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
+
+/*
+
+int MetNum(int num)
+{
+    int result = num % 100 / 10;
+    
+    return result;
+}
+
+Console.Write("Введите трехзначное число: ");
+int num1 = Convert.ToInt32(Console.ReadLine());
+
+
+int newNum = MetNum(num1);
+Console.WriteLine($"Вторая цифра числа {num1} - {newNum}");
+
+*/
+
+// Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+
+/*
+Console.Write("Input a number: ");
+int newNum = Convert.ToInt32(Console.ReadLine());
+string newNumText = Convert.ToString(newNum);
+
+if (newNumText.Length > 2)
+{
+  Console.WriteLine("Third number " + newNumText[2]);
+}
+else 
+{
+  Console.WriteLine("No third digit");
+}
+*/
+
+// Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+
+bool MetDayoff(int date)
+{
+    if (date == 6 || date == 7)
+    {
+        return true;
+    }
+    
+    else
+    {
+    
+        return false;   
+    }
+}
+
+int randNum = new Random().Next(1, 8);
+bool newNum = MetDayoff(randNum);
+Console.WriteLine($"Число {randNum} {newNum}");
 
