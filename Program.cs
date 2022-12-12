@@ -104,7 +104,7 @@ else
 {
   Console.WriteLine("No third digit");
 }
-*/
+
 
 // Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 
@@ -125,4 +125,86 @@ bool MetDayoff(int date)
 int randNum = new Random().Next(1, 8);
 bool newNum = MetDayoff(randNum);
 Console.WriteLine($"Число {randNum} {newNum}");
+*/
+
+// ДЗ 3.
+// Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
+/*
+void Palindrome (int num1, int num2, int num3, int num4, int num5)
+{
+
+    if (num1 == num5 && num2 == num4)
+    {
+        Console.WriteLine("Yes!");
+    }
+    else
+    {
+        Console.WriteLine("No!");
+    }
+}
+Console.Write("Введите первое число: ");
+int num1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите втрое число: ");
+int num2 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите третье число: ");
+int num3 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите четвертое число: ");
+int num4 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите пятое число: ");
+int num5 = Convert.ToInt32(Console.ReadLine());
+
+Palindrome (num1, num2, num3, num4, num5);
+
+*/
+
+// Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
+/*
+double Distance (double xA, double yA, double zA, double xB, double yB, double zB)
+{
+    double cat1 = Math.Pow(xB - xA, 2);
+    double cat2 = Math.Pow(yB - yA, 2);
+    double cat3 = Math.Pow(zB - zA, 2);
+    double result = Math.Sqrt(cat1 + cat2 + cat3);
+    double newresult = Math.Round(result, 2);
+    return newresult;
+}
+Console.Write("Input the first coordinate xA = ");
+double xA = Convert.ToDouble(Console.ReadLine());
+Console.Write("Input the second coordinate yA = ");
+double yA = Convert.ToDouble(Console.ReadLine());
+Console.Write("Input the third coordinate zA = ");
+double zA = Convert.ToDouble(Console.ReadLine());
+
+Console.Write("Input the first coordinate xB = ");
+double xB = Convert.ToDouble(Console.ReadLine());
+Console.Write("Input the second coordinate yB = ");
+double yB = Convert.ToDouble(Console.ReadLine());
+Console.Write("Input the third coordinate zB = ");
+double zB = Convert.ToDouble(Console.ReadLine());
+
+double res = Distance(xA, yA, zA, xB, yB, zB);
+Console.Write(res);
+
+*/
+
+// Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+
+/*
+void CubeNumber (int num)
+{
+    int count = 1;
+    while (count <= num)
+    {
+        double cubeNum = Math.Pow(count, 3);
+        Console.Write(cubeNum + " ");
+        count++;
+    }
+}
+Console.Write("Input a number: ");
+int number = Convert.ToInt32(Console.ReadLine());
+CubeNumber(number);
+
+*/
+
+
 
