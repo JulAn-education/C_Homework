@@ -206,5 +206,82 @@ CubeNumber(number);
 
 */
 
+//ДЗ 4.
+
+//Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+/*
+int MetPow (int num1, int num2)
+{
+    int result = 1;
+
+    for (int ind = 1; ind <= num2; ind++)
+    {
+        result = num1 * result;
+    }  
+    return result;
+}
+
+Console.Write("Введите число A: ");
+int num1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите число B: ");
+int num2 = Convert.ToInt32(Console.ReadLine());
+int newNum = MetPow(num1, num2);
+Console.WriteLine($"Число {num1} в степени {num2} равно {newNum}");
+
+*/
 
 
+// Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе. 
+
+/*
+ int SumNumbers(int num)
+ {  
+    int count = Convert.ToString(num).Length;
+    int sum = 0;
+    int result = 0;
+
+    for (int i = 0; i < count; i++)
+    {
+      sum = num - num % 10;
+      result = result + (num - sum);
+      num = num / 10;
+    }
+   return result;
+ }
+
+Console.Write("Введите число: ");
+int sumNum  = Convert.ToInt32(Console.ReadLine());
+int summ = SumNumbers(sumNum);
+Console.WriteLine($"Сумма числа {sumNum} равна {summ}");
+
+*/
+
+// Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+
+/*
+int[] CreateArray(int size)
+{
+    int[] array = new int[size]; 
+
+    for (int i = 0; i < size; i++)
+    {
+        Console.Write($"Input numbers of array for index {i + 1}: ");
+        array[i] = Convert.ToInt32(Console.ReadLine());
+    }    
+    return array;
+}
+
+void ShowArray(int[] array)
+{
+    for(int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + " ");
+    }
+}
+
+Console.Write("Input a number of elements: ");
+int Length = Convert.ToInt32(Console.ReadLine());
+
+int[] myArray = CreateArray(Length);
+ShowArray(myArray);
+*/
