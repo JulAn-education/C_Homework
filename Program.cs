@@ -493,7 +493,7 @@ PositiveNum(myArray);
 
 //b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
 
-
+/*
 Console.Write("Введите k1: ");
 double k1 = Convert.ToDouble(Console.ReadLine());
 Console.Write("Введите b1: ");
@@ -522,7 +522,93 @@ else
 if (b1 == b2 && k1 == k2)
     Console.WriteLine("Прямые совпадают.");
 
+ */
+
+
+//ДЗ 9
  
+// Задача 64: Задайте значение N. Напишите программу, которая выведет все натуральные числа в промежутке от N до 1. Выполнить с помощью рекурсии.
+/*
+
+void ShowNum(int n)
+{
+    Console.Write(n + " ");
+    if (n > 1)
+    {
+        ShowNum(n - 1);
+    }
+}
+
+Console.Write("Input a number: ");
+int num = Convert.ToInt32(Console.ReadLine());
+ShowNum(num);
+
+*/
+
+
+//Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
+
+/*
+int SumNumber(int m, int n)
+{
+
+    if (m < n)
+    { 
+        return m + SumNumber(m + 1, n); 
+    }   
+    if (n < m) 
+    {     
+        return m + SumNumber(m - 1, n);  
+    } 
+    if (m == n)
+    {
+        return m;
+    }
+   return 0;
+}
+
+Console.Write("Input a number M: ");
+int num1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input a number N: ");
+int num2 = Convert.ToInt32(Console.ReadLine());
+int sum = SumNumber (num1, num2);
+Console.WriteLine(sum);
+
+*/
+
+
+
+//Задача 68: Напишите программу вычисления функции Аккермана с помощью рекурсии. Даны два неотрицательных числа m и n.
+
+int AkkermanFunction(int m, int n)
+{
+    if (m == 0)
+    {
+        return n + 1;
+    }
+    if (n == 0 && m > 0)
+    {
+        return AkkermanFunction(m - 1, 1);
+    }
+    else
+    {
+        return (AkkermanFunction(m - 1, AkkermanFunction(m, n - 1)));
+    }
+}
+
+Console.Write("Input a number M: ");
+int num1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input a number N: ");
+int num2 = Convert.ToInt32(Console.ReadLine());
+int function = AkkermanFunction (num1, num2);
+Console.WriteLine(function);
+
+
+
+
+
+
+
 
 
 
