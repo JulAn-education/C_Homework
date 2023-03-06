@@ -1044,7 +1044,7 @@ ShowArray(myArray);
 
 */
 
-
+/*
 //Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4.
 
 void CreateArraySpiral(int[,] array, int n)
@@ -1092,6 +1092,53 @@ CreateArraySpiral(array, length);
 ShowArray(array);
 
 
+*/
+
+//Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4.
+
+void CreateArraySpiral(int[,] array, int n)
+{
+    int i = 0, j = 0;
+    int value = 1;
+    for (int x = 0; x < n * n; x++)
+    {
+        int k = 0;
+        do { array[i, j++] = value++; } 
+        while (++k < n - 1);
+
+        for (k = 0; k < n - 1; k++) 
+            array[i++, j] = value++;
+        for (k = 0; k < n - 1; k++) 
+            array[i, j--] = value++;
+        for (k = 0; k < n - 1; k++) 
+            array[i--, j] = value++;
+        ++i; ++j;
+        n = n < 2 ? 0 : n - 2;
+    }
+}
+
+
+void ShowArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            if (array[i, j] < 10)
+            {
+                Console.Write("0" + array[i, j]);
+                Console.Write(" ");
+            }
+            else Console.Write(array[i, j] + " ");
+        }
+        Console.WriteLine();
+    }
+}
+
+int length = 4;
+int[,] array = new int[length, length];
+CreateArraySpiral(array, length);
+ShowArray(array);
 
 
 
